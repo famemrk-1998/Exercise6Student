@@ -22,10 +22,10 @@ public class StudentDatabaseJPA {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Student student1 = new Student(1, "John", 4.00);
-       Student student2 = new Student(2, "Marry", 3.00);
-       StudentTable.insertStudent(student1);
-       StudentTable.insertStudent(student2);
+       Student std1 = new Student(1, "John", 4.00);
+       Student std2 = new Student(2, "Marry", 3.00);
+       StudentTable.insertStudent(std1);
+       StudentTable.insertStudent(std2);
        
        List<Student> studentList = StudentTable.findAllStudent();
        printAllEmployee(studentList);
@@ -33,10 +33,10 @@ public class StudentDatabaseJPA {
     
     
      public static void printAllEmployee(List<Student> studentList) {
-        for(Student student : studentList) {
-           System.out.print(student.getId() + " ");
-           System.out.print(student.getName() + " ");
-           System.out.println(student.getGpa() + " ");
+        for(Student std : studentList) {
+           System.out.print(std.getId() + " ");
+           System.out.print(std.getName() + " ");
+           System.out.println(std.getGpa() + " ");
        }
     }
 }

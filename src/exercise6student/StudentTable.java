@@ -83,7 +83,7 @@ public class StudentTable {
         return student;
     }
 
-    public static List<Student> findEmployeeByName(String name) {
+    public static List<Student> findStudentByName(String name) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("exercise6studentPU");
         EntityManager em = emf.createEntityManager();
         Query query = em.createNamedQuery("Student.findByName");
